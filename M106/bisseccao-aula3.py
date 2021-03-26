@@ -17,7 +17,13 @@ def cacl(an,bn,x,cont,anOrbn):
     # ENTRE COM A FUNÇÃO AQUI
     # exercico 1 -> func = x**3 - 5*(x**2) + 17*x + 21
     # exercico 2 -> func = e**-x - x
-    func = x**3 - 5*(x**2) + 17*x + 21
+    func = e**-x - x
+    if(cont == 0):
+        if((an**3 - 5*(an**2) + 17*an + 21) > 0):
+            anOrbn = 'an'
+        else:
+            anOrbn = 'bn'
+        print(anOrbn)
     anBn = abs(bn - an) / 2
     print("-------------------------------------")
     print("Valor do cont: ", cont)
@@ -47,9 +53,7 @@ def cacl(an,bn,x,cont,anOrbn):
 if __name__ == '__main__':
     an = float(input("Valor inicial de An: "))
     bn = float(input("Valor inicial de Bn: "))
-    anOrbn = ''
-    while anOrbn != 'an' and anOrbn != 'bn':
-        anOrbn = input("Indica o valor que é POSITIVO. (Para An Positivo colcoar an, para Bn positivo colocar bn) ")
     x = (an + bn)/2
     cont = 0
+    anOrbn = ''
     cacl(an,bn,x,cont,anOrbn)
