@@ -1,5 +1,4 @@
 from math import e
-C:\Users\itmoura\PycharmProjects\pythonM106
 
 an = 0.0000
 bn = 0.0000
